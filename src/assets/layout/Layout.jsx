@@ -4,9 +4,9 @@ import Footer from "../components/footer/Footer";
 
 const Layout = (props) => {
   return (
-    <div>
+    <div className=" w-full h-full">
       <MenuBar />
-      {props.children}
+      <div className=" py-24">{props.children}</div>
       <Footer />
     </div>
   );

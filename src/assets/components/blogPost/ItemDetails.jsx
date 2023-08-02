@@ -2,9 +2,9 @@ import React from "react";
 
 const ItemDetails = ({ post }) => {
   return (
-    <div className="container mx-auto py-28">
+    <div className="container mx-auto px-4">
       <div className="card card-compact w-full bg-gray-50 shadow-xl">
-        <figure>
+        <figure className="">
           <img src={post.postDetails.img} alt="Post Image" />
         </figure>
         <div className="card-body">
