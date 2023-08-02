@@ -1,12 +1,15 @@
 import React from "react";
+import Layout from "../layout/Layout";
 
 const Error404 = () => {
   return (
-    <div className="flex justify-center items-center h-full">
-      <p className=" text-3xl font-black text-red-500 px-8 py-6 border-4 border-red-500 rounded">
-        Page Not Found
-      </p>
-    </div>
+    <Layout>
+      <div className="min-h-screen flex justify-center items-center">
+        <p className=" text-xl font-black text-red-500 px-8 py-6 border-2 border-red-500 rounded">
+          Page Not Found
+        </p>
+      </div>
+    </Layout>
   );
 };
 

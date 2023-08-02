@@ -1,23 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CardPost = ({ list }) => {
+const LatestPost = ({ posts }) => {
   return (
     <div className=" container mx-auto p-6 lg:p-0 md:p-0">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-2 gap-6">
-        {list.map((item, index) => {
+        {posts.map((post, index) => {
           return (
             <Link
-              to={"/details/" + item["id"]}
+              to={"/details/" + post["id"]}
               key={index.toString()}
               className="card bg-slate-50 shadow-xl"
             >
               <figure>
-                <img src={item.img} alt={item.title} />
+                <img src={post.img} alt={post.title} />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{item.title}</h2>
-                <p>{item.short}</p>
+                <h2 className="card-title">{post.title}</h2>
+                <p>{post.short}</p>
               </div>
             </Link>
           );
@@ -27,4 +27,4 @@ const CardPost = ({ list }) => {
   );
 };
 
-export default CardPost;
+export default LatestPost;
